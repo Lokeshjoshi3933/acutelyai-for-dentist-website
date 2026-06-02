@@ -9,8 +9,8 @@ function Hero() {
         <header className="hero-header">
           <div className="ct header-container">
             <img src={logoUrl} alt="Acutely AI Logo" className="logo" />
-            <nav className="hdr-nav">
-              <a href="#home">Home</a>
+            <nav className="desktop-nav">
+              <a href="#man-behind">Founder</a>
               <a href="#services">Services</a>
               <a href="#sample-concepts">Concepts</a>
               <a href="#process">Process</a>
