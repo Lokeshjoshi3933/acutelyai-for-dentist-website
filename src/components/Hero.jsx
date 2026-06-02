@@ -9,12 +9,12 @@ function Hero() {
         <header className="hero-header">
           <div className="ct header-container">
             <img src={logoUrl} alt="Acutely AI Logo" className="logo" />
-            <nav className="desktop-nav">
-              <a href="#man-behind">Founder</a>
+            <nav className="hdr-nav">
+              <a href="#home">Home</a>
               <a href="#services">Services</a>
               <a href="#sample-concepts">Concepts</a>
               <a href="#process">Process</a>
-              <a href="https://cal.com/lokesh-joshi/demo-call-30-min" target="_blank" rel="noopener noreferrer" className="contact-btn">Let's Talk</a>
+              <a href="https://cal.com/lokesh-joshi/free-website-preview-call" target="_blank" rel="noopener noreferrer" className="contact-btn">Let's Talk</a>
             </nav>
           </div>
         </header>
