@@ -1,0 +1,23 @@
+/* Footer */
+.ftr {
+  background: #111113;
+  color: var(--text-light);
+  padding-top: 80px;
+  border-top: 1px solid var(--border-soft);
+  position: relative;
+  z-index: 10;
+}
+.ftr-r { display: flex; flex-direction: column; gap: 32px; padding: 40px 0; }
+@media(min-width: 768px) { .ftr-r { flex-direction: row; align-items: center; justify-content: space-between; } }
+.ftr-tg { font-size: 15px; color: var(--text-muted); margin-top: 8px; font-weight: 500; }
+.ftr-lk { display: flex; gap: 32px; flex-wrap: wrap; }
+.ftr-lk a { font-size: 16px; font-weight: 600; color: var(--text-muted); transition: all 0.3s ease; }
+.ftr-lk a:hover { color: var(--accent); transform: translateY(-2px); }
+.ftr-dv { height: 1px; background: rgba(255,255,255,.05); }
+.ftr-b { display: flex; flex-direction: column; gap: 16px; padding: 32px 0; align-items: center; text-align: center; }
+@media(min-width: 768px) { .ftr-b { flex-direction: row; justify-content: space-between; text-align: left; } }
+.ftr-b span { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+
+@media (max-width: 768px) {
+  .ftr { padding-top: 40px; }
+}

@@ -1,0 +1,27 @@
+.ab-bg {
+  background: var(--bg-main);
+  position: relative;
+}
+
+.ab-g {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+@media(min-width: 768px) {
+  .ab-g { grid-template-columns: 1fr 1fr; gap: 80px; }
+}
+
+.ab-g p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.ab-g strong {
+  color: var(--text-light);
+  font-weight: 700;
+}

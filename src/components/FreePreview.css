@@ -1,0 +1,55 @@
+/* Risk Reversal Section */
+.rr-bg { background: var(--accent); position: relative; padding: 100px 0; margin-top: 100px;}
+.rr-card {
+  background: rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: var(--radius-lg);
+  padding: 40px 32px;
+  transition: all 0.5s var(--ease-lux);
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  align-items: center;
+}
+
+.rr-card:hover {
+  transform: translateY(-10px);
+  background: rgba(0,0,0,0.08);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  border-color: rgba(0,0,0,0.2);
+}
+
+.rr-icon {
+  width: 64px;
+  height: 64px;
+  background: #111;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  font-size: 24px;
+  margin-bottom: 24px;
+  transition: all 0.5s var(--ease-lux);
+}
+
+.rr-card:hover .rr-icon { transform: scale(1.15) rotate(-10deg); }
+
+.rr-card h3 {
+  font-family: 'Cabinet Grotesk', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.rr-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #222;
+  margin: 0;
+  font-weight: 500;
+}
