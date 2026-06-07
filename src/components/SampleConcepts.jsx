@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './SampleConcepts.css';
-import dentalConcept from '../assets/images/dental_concept.png';
+import treeConcept from '../assets/images/tree_concept.jpg';
 import consultantConcept from '../assets/images/consultant_concept.png';
 import businessConcept from '../assets/images/business_concept.png';
 
@@ -19,17 +19,18 @@ function SampleConcepts() {
 
   const concepts = [
     {
-      title: "Premium Dental Clinic Website",
-      category: "Healthcare Concept",
-      image: dentalConcept,
-      description: "A clean, high-trust clinic website concept designed to help patients understand treatments, trust the doctor, and book through WhatsApp.",
-      tags: ["Dental Clinic", "WhatsApp Booking", "Trust-Focused"],
+      title: "Premium Tree Service Authority Site",
+      category: "Tree Service Business",
+      image: treeConcept,
+      iframeUrl: '/demo-tree-service/index.html',
+      description: "A clean, high-trust contractor website concept designed to help clients understand services, trust the team, and request a quote.",
+      tags: ["Service Business", "Quote Requests", "Trust-Focused"],
       bullets: [
-        "Treatment sections for implants, braces, root canal, and cosmetic dentistry",
-        "Doctor profile and clinic trust section",
-        "Google reviews and patient-friendly FAQs",
+        "Service sections for tree removal, roofing, plumbing, and concrete",
+        "Team profile and company trust section",
+        "Google reviews and customer-friendly FAQs",
         "WhatsApp booking and Google Maps integration",
-        "Mobile-first layout for quick patient enquiries"
+        "Mobile-first layout for quick quote requests"
       ]
     },
     {
@@ -74,7 +75,12 @@ function SampleConcepts() {
         
         <div className="concept-grid">
           {concepts.map((concept, index) => (
-            <div key={index} className={`concept-card rv v d${index + 1}`}>
+            <div 
+              key={index} 
+              className={`concept-card rv v d${index + 1}`}
+              onClick={() => setSelectedConcept(concept)}
+              style={{ cursor: 'pointer' }}
+            >
               <div className="concept-img-wrapper">
                 <img src={concept.image} alt={concept.title} className="concept-img" />
               </div>
@@ -89,7 +95,6 @@ function SampleConcepts() {
                 </div>
                 <button 
                   className="concept-btn"
-                  onClick={() => setSelectedConcept(concept)}
                 >
                   View Concept Preview
                 </button>
@@ -107,7 +112,15 @@ function SampleConcepts() {
             </button>
             
             <div className="modal-img-container">
-              <img src={selectedConcept.image} alt={selectedConcept.title} className="modal-img" />
+              {selectedConcept.iframeUrl ? (
+                <iframe 
+                  src={selectedConcept.iframeUrl} 
+                  title={selectedConcept.title} 
+                  style={{ width: '100%', height: '100%', minHeight: '400px', border: 'none' }}
+                />
+              ) : (
+                <img src={selectedConcept.image} alt={selectedConcept.title} className="modal-img" />
+              )}
             </div>
             
             <div className="modal-content">

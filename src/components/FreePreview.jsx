@@ -1,4 +1,3 @@
-import React from 'react';
 import './FreePreview.css';
 
 function FreePreview() {

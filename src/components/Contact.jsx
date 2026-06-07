@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './Contact.css';
 import Cal, { getCalApi } from "@calcom/embed-react";
 

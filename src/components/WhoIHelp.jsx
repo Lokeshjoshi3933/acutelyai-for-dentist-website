@@ -1,14 +1,13 @@
-import React from 'react';
 import './WhoIHelp.css';
 
 function WhoIHelp() {
   const audiences = [
-    "Dental Clinics",
-    "Healthcare Clinics",
-    "Consultants",
+    "Tree Services",
+    "Roofing & Decking",
+    "Plumbers & HVAC",
     "Local Service Businesses",
-    "Founder-led Indian Businesses",
-    "Businesses selling to premium Indian or global customers"
+    "Concrete Contractors",
+    "Founder-led Businesses"
   ];
 
   return (
