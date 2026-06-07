@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './SampleConcepts.css';
 import treeConcept from '../assets/images/tree_concept.jpg';
-import consultantConcept from '../assets/images/consultant_concept.png';
 import businessConcept from '../assets/images/business_concept.png';
 
 function SampleConcepts() {
@@ -34,17 +33,18 @@ function SampleConcepts() {
       ]
     },
     {
-      title: "Modern Consultant Website",
-      category: "Advisory Concept",
-      image: consultantConcept,
-      description: "A premium consultant website concept built to show authority, explain services, and attract serious business enquiries.",
-      tags: ["Consultant", "Authority", "Lead Enquiries"],
+      title: "Fence & Deck Contractor Website",
+      category: "Fence & Deck Business",
+      image: "/demo-fence-deck/images/hero-home.png",
+      iframeUrl: "/demo-fence-deck/index.html",
+      description: "A homeowner-focused contractor website concept built around fence services, deck builds, recent projects, and fast quote requests.",
+      tags: ["Service Business", "Project Proof", "Free Estimates"],
       bullets: [
-        "Strong expert positioning",
-        "Services and advisory process section",
-        "Authority-building about section",
-        "Lead enquiry CTA",
-        "Clean layout for consultants, coaches, advisors, and CA firms"
+        "Fence installation and deck building service pages",
+        "Recent projects and trust-building proof",
+        "Local Franklin, TN contractor positioning",
+        "Clear free-estimate CTA flow",
+        "Mobile-first layout for homeowner enquiries"
       ]
     },
     {

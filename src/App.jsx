@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import heroBg from './assets/images/hero-bg.png';
 import logoUrl from './assets/images/logo.png';
 import treeConcept from './assets/images/tree_concept.jpg';
-import consultantConcept from './assets/images/consultant_concept.png';
 import businessConcept from './assets/images/business_concept.png';
 
 const cases = [
@@ -11,17 +10,19 @@ const cases = [
     type: 'Tree Service Business',
     image: treeConcept,
     iframeUrl: '/demo-tree-service/index.html',
+    previewDomain: 'lonestarcanopy.com',
     description:
       'A high-trust service direction built around contractor credibility, service clarity, reviews, and fast quote requests.',
     points: ['Service pages', 'Contractor positioning', 'Review-ready layout'],
   },
   {
-    title: 'Consultant Trust Website',
-    type: 'Advisor site',
-    image: consultantConcept,
+    title: 'Fence & Deck Contractor Website',
+    type: 'Fence & Deck Business',
+    iframeUrl: '/demo-fence-deck/index.html',
+    previewDomain: 'cedarridgefenceanddeck.com',
     description:
-      'A cleaner positioning system for experts who need to explain their offer and attract serious enquiries.',
-    points: ['Expert profile', 'Clear services', 'Lead enquiry flow'],
+      'A service-business demo for homeowners comparing fence installation, deck builds, project proof, and free estimates.',
+    points: ['Fence and deck services', 'Project gallery', 'Estimate-focused flow'],
   },
   {
     title: 'Premium Business Website',
@@ -34,7 +35,7 @@ const cases = [
 ];
 
 const process = [
-  ['01', 'Send the basics', 'You share your clinic or business name, services, photos, city, and contact details.'],
+  ['01', 'Send the basics', 'You share your service business name, services, photos, city, and contact details.'],
   ['02', 'Free homepage preview', 'I design the first direction so you can judge the quality before paying.'],
   ['03', 'Build the full site', 'Once the direction feels right, I build the pages, content flow, and enquiry paths.'],
   ['04', 'Launch and improve', 'We launch, check the mobile experience, and keep the website easy to update.'],
@@ -96,7 +97,7 @@ function App() {
           <a href="#work">Work</a>
           <a href="#system">System</a>
           <a href="#process">Process</a>
-          <a href="#contact" className="nav-cta">Book a Call</a>
+          <a href="https://cal.com/lokesh-joshi/free-website-preview-call" target="_blank" rel="noreferrer" className="nav-cta">Book a Call</a>
         </nav>
       </header>
 
@@ -107,7 +108,7 @@ function App() {
             <div className="hero-copy">
               <div className="brand-stripe" aria-hidden="true" />
               <p className="micro">Acutely AI portfolio</p>
-              <h1>Premium service business websites built to turn visitors into quote requests.</h1>
+              <h1>Trust-first websites for service businesses that need more calls and quote requests.</h1>
               <p className="hero-text">
                 I design sharp, trust-building websites for service businesses and local contractors. Clear message, premium visual direction, and simple quote paths.
               </p>
@@ -150,20 +151,20 @@ function App() {
         <section className="proof-strip" aria-label="Acutely AI proof points">
           <div className="container proof-grid">
             <div>
-              <strong>48-72h</strong>
-              <span>first homepage preview</span>
+              <strong>Free preview</strong>
+              <span>before you decide</span>
             </div>
             <div>
-              <strong>Service first</strong>
-              <span>built around customer trust</span>
+              <strong>Direct access</strong>
+              <span>communicate with Lokesh</span>
             </div>
             <div>
-              <strong>No templates</strong>
-              <span>custom direction for each business</span>
+              <strong>Mobile first</strong>
+              <span>built for calls & quotes</span>
             </div>
             <div>
-              <strong>Simple launch</strong>
-              <span>clear steps, no tech confusion</span>
+              <strong>Practical</strong>
+              <span>for real service businesses</span>
             </div>
           </div>
         </section>
@@ -213,7 +214,7 @@ function App() {
             <div className="section-head work-head">
               <div>
                 <p className="micro">Selected directions</p>
-                <h2>Portfolio concepts with a clear job.</h2>
+                <h2>Demo Websites I Built for Service Businesses.</h2>
               </div>
               <a className="text-link" href="https://wa.me/918193973933" target="_blank" rel="noreferrer">
                 Discuss a project
@@ -255,7 +256,7 @@ function App() {
                       <span />
                       <span />
                       <span />
-                      <strong>lonestarcanopy.com</strong>
+                      <strong>{selectedCase.previewDomain || 'demo-website.com'}</strong>
                     </div>
                     <iframe
                       src={selectedCase.iframeUrl}
@@ -279,7 +280,8 @@ function App() {
                   </div>
                   {selectedCase.iframeUrl && (
                     <div className="case-open-hint">
-                      Click to open and scroll the full website
+                      <span className="desktop-hint">Click card to open and scroll the live website</span>
+                      <span className="mobile-hint">Tap to open preview</span>
                     </div>
                   )}
                 </div>
@@ -379,12 +381,18 @@ function App() {
               </p>
             </div>
             <div className="contact-card">
-              <a href="mailto:Lokeshjoshibusiness@gmail.com">Lokeshjoshibusiness@gmail.com</a>
-              <a href="tel:+918193973933">+91 8193973933</a>
-              <a href="https://wa.me/918193973933" target="_blank" rel="noreferrer">WhatsApp me</a>
-              <a href="https://cal.com/lokesh-joshi/free-website-preview-call" target="_blank" rel="noreferrer">
-                Book a 15-minute call
-              </a>
+              <div style={{ padding: '24px', background: 'var(--canvas)' }}>
+                <p style={{ margin: 0, fontSize: '18px', fontWeight: '800' }}>
+                  Send me your business type and city, and I'll show you what I'd build.
+                </p>
+              </div>
+              <a href="mailto:lokeshjoshibusiness@gmail.com">lokeshjoshibusiness@gmail.com</a>
+              <a href="tel:+918193973933">IN: +91 8193973933</a>
+              <a href="tel:+12014097010">US: +1 201-409-7010</a>
+              <div className="contact-actions">
+                <a className="whatsapp-btn" href="https://wa.me/918193973933" target="_blank" rel="noreferrer">WhatsApp</a>
+                <a className="call-btn" href="https://cal.com/lokesh-joshi/free-website-preview-call" target="_blank" rel="noreferrer">Book a 15-minute call</a>
+              </div>
             </div>
           </div>
         </section>
@@ -398,7 +406,7 @@ function App() {
       </footer>
 
       <a className="floating-whatsapp" href="https://wa.me/918193973933" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
-        WA
+        <i className="fab fa-whatsapp" style={{ fontSize: '32px' }}></i>
       </a>
 
       {isPreviewModalOpen && selectedCase.iframeUrl && (
@@ -435,7 +443,7 @@ function App() {
                   <span />
                   <span />
                 </div>
-                <strong>lonestarcanopy.com</strong>
+                <strong>{selectedCase.previewDomain || 'demo-website.com'}</strong>
               </div>
               <iframe
                 src={selectedCase.iframeUrl}
