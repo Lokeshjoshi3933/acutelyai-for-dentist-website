@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import heroBg from './assets/images/hero-bg.png';
 import logoUrl from './assets/images/logo.png';
 import treeConcept from './assets/images/tree_concept.jpg';
-import businessConcept from './assets/images/business_concept.png';
 
 const cases = [
   {
@@ -25,12 +24,13 @@ const cases = [
     points: ['Fence and deck services', 'Project gallery', 'Estimate-focused flow'],
   },
   {
-    title: 'Premium Business Website',
-    type: 'Founder-led brand',
-    image: businessConcept,
+    title: 'Concrete Contractor Website',
+    type: 'Concrete Contractor Business',
+    iframeUrl: '/demo-concrete-contractor/index.html',
+    previewDomain: 'lonestarconcrete.com',
     description:
-      'A stronger digital front door for businesses that want to look credible before a buyer ever calls.',
-    points: ['Brand story', 'Capability proof', 'Contact-focused CTA'],
+      'A local contractor demo built around concrete services, project proof, reviews, service areas, and estimate requests.',
+    points: ['Concrete services', 'Project proof', 'Estimate-focused CTA'],
   },
 ];
 

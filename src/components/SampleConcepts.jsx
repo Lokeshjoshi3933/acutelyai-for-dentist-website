@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import './SampleConcepts.css';
 import treeConcept from '../assets/images/tree_concept.jpg';
-import businessConcept from '../assets/images/business_concept.png';
 
 function SampleConcepts() {
   const [selectedConcept, setSelectedConcept] = useState(null);
@@ -48,17 +47,18 @@ function SampleConcepts() {
       ]
     },
     {
-      title: "Indian Business Website With Global Feel",
-      category: "Business Concept",
-      image: businessConcept,
-      description: "A premium business website concept for Indian companies that want to look modern, credible, and ready for bigger clients.",
-      tags: ["Business Website", "Premium Brand", "Global Look"],
+      title: "Concrete Contractor Website",
+      category: "Concrete Contractor Business",
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+      iframeUrl: "/demo-concrete-contractor/index.html",
+      description: "A local concrete contractor demo built around driveways, patios, slabs, project proof, reviews, and fast estimate requests.",
+      tags: ["Service Business", "Concrete Services", "Estimate Requests"],
       bullets: [
-        "Global-style homepage design",
-        "Company credibility and capability sections",
-        "Services or product overview",
-        "Contact enquiry CTA",
-        "Built for exporters, agencies, manufacturers, and service companies"
+        "Concrete driveway, patio, slab, sidewalk, and repair service pages",
+        "Project gallery and homeowner trust proof",
+        "Austin, TX local contractor positioning",
+        "Clear estimate request CTA flow",
+        "Mobile-first layout for service enquiries"
       ]
     }
   ];
